@@ -12,8 +12,8 @@ async def Camoufoxy() -> AsyncIterator[BrowserContext]:
     Camoufoxy is a context manager that yields a AsyncCamoufox instance.
     """
     async with AsyncCamoufox(
-        headless=True,
-        # headless="virtual",
+        # headless=True,
+        headless="virtual",
         # config={"forceScopeAccess": True},
         # disable_coop=True,
         # i_know_what_im_doing=True,

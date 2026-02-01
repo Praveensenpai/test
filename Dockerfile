@@ -30,4 +30,4 @@ COPY . .
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen
 
-CMD ["uv", "run", "python", "main.py"]
+CMD ["xvfb-run", "--auto-servernum", "--server-args=-screen 0 1280x960x24", "uv", "run", "python", "main.py"]

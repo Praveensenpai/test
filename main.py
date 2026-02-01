@@ -251,14 +251,23 @@ async def main() -> None:
         await click_ticket_by_title(page, "Vatican Museums - Admission Ticket")
         await page.wait_for_timeout(5000)
         await select_both_tickets(page)
+        print("sselect")
         await select_time_slot(page, time_slot)
+        print("click_proceed")
         await click_proceed(page)
+        print("fill_manager_form")
         await fill_manager_form(page)
+        print("fill_participants_form")
         await fill_participants_form(page, generate_participants(2))
+        print("accept_terms_and_conditions")
         await accept_terms_and_conditions(page)
+        print("handle_turnstile")
         await handle_turnstile(page)
+        print("click_on_buy")
         await click_on_buy(page)
+        print(",,,")
         await page.wait_for_timeout(30 * 1000)
+        print(page.url)
 
 
 if __name__ == "__main__":

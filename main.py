@@ -244,7 +244,7 @@ async def main() -> None:
 
         await goto(
             page,
-            "http://tickets.museivaticani.va/home/fromtag/2/1768156200000/MV-Biglietti/1",
+            "https://tickets.museivaticani.va/home/fromtag/2/1772130600000/MV-Biglietti/1",
             GotoOptions(selector=".muvaTicketsContainer"),
         )
 
